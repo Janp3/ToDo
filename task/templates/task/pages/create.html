@@ -1,0 +1,15 @@
+{% extends 'global/base.html' %}
+{% block title %} | Create task{% endblock title %}
+{% block content %}
+    <div class="form-container">
+        <form method="post">
+            {% csrf_token %}
+            <h1>Create new task</h1>
+            <label for="task">Title</label>
+            <input type="text" name="title" required>
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" required>
+            <button class="btn btn-create" type="submit">Save</button>
+        </form>
+    </div>
+{% endblock content %}

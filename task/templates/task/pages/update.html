@@ -1,0 +1,14 @@
+{% extends 'global/base.html' %}
+{% block title %} | Update task{% endblock title %}
+{% block content %}
+    <div class="form-container">
+        <form method="post">
+            <h1>Update task</h1>
+            <label for="task">Title</label>
+            <input type="text" name="task" required>
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" required>
+            <button class="btn btn-create" type="submit">Save changes</button>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends 'global/base.html' %}
+{% block title %} | Home{% endblock title %}
+{% block content %}
+ <div class="item">
+<table border="1">
+    <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>delete</th>
+        <th>edit</th>
+    </tr>
+    {% for items in task %}
+    <tr>
+        <td> {{ items.title }} </td>
+        <td> {{ items.date }} </td>
+        <td> teste</td>
+        <td> teste</td>
+    </tr>
+    {% endfor %}
+</table>
+</div> 
+
+{% endblock content %}
