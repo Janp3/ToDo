@@ -5,9 +5,9 @@
         <form method="post">
             <h1>Update task</h1>
             <label for="task">Title</label>
-            <input type="text" name="task" required>
+            <input type="text" name="task" required value="{{task.title}}">
             <label for="date">Date</label>
-            <input type="date" name="date" id="date" required>
+            <input type="date" name="date" id="date" value="{{ task.date }}" required>
             <button class="btn btn-create" type="submit">Save changes</button>
         </form>
     </div>

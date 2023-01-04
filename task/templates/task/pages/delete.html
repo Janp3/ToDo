@@ -1,0 +1,11 @@
+{% extends 'global/base.html' %}
+{% block content %}
+<div class="choices">
+    <h1>You are about to delete your task. Do you sure want to continue?</h1>
+    <form method="POST" >
+        {% csrf_token %}
+        <input class="btn btn-yes" type="submit" name="yes" value="Yes"></input>
+        <a class="no" href="{% url 'task:home' %}" >No</a>
+    </form>
+</div>
+{% endblock content %}

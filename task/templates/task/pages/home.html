@@ -2,22 +2,22 @@
 {% block title %} | Home{% endblock title %}
 {% block content %}
  <div class="item">
-<table border="1">
-    <tr>
-        <th>Title</th>
-        <th>Date</th>
-        <th>delete</th>
-        <th>edit</th>
-    </tr>
-    {% for items in task %}
+     <table>
+         <tr>
+             <th>Title</th>
+             <th>Date</th>
+            </tr>
+            {% for items in task %}
     <tr>
         <td> {{ items.title }} </td>
         <td> {{ items.date }} </td>
-        <td> teste</td>
-        <td> teste</td>
+        <td class="options-list"><a href="{% url 'task:delete_task' items.id %}">X</a></td>
+        <td class="options-list"><a href="{% url 'task:update_task' items.id %}">U</a></td>
     </tr>
+    {% empty %}
+    <h1>Sorry, you still didn't add a task</h1>
     {% endfor %}
-</table>
+</table>    
 </div> 
 
 {% endblock content %}
